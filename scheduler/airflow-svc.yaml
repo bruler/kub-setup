@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: airflow
+spec:
+  type: LoadBalancer
+  ports:
+  - name: airflow-webui
+    port: 80
+    targetPort: 8080
+  - name: github-webhook
+    port: 5000
+    targetPort: 5000
+  selector:
+    name: airflow
