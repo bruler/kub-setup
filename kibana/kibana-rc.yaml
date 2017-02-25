@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: kibana
+  labels:
+    app: kibana
+spec:
+  replicas: 1
+  selector:
+    name: kibana
+  template:
+    metadata:
+      labels:
+        name: kibana
+    spec:
+      containers:
+      - name: kibana
+        image: kibana
+        imagePullPolicy: "Never"
+        ports:
+        - containerPort: 5601
+      nodeSelector:
+        training: "true"
