@@ -3,10 +3,13 @@ kind: Service
 metadata:
   name: elasticsearch
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
-  - name: http
-    port: 80
-    targetPort: 5858
+  - name: native
+    port: 9200
+    targetPort: 9200
+  - name: "9300"
+    port: 9300
+    targetPort: 9300
   selector:
     name: elasticsearch

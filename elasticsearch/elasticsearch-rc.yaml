@@ -16,8 +16,9 @@ spec:
       containers:
       - name: elasticsearch
         image: elasticsearch
-        imagePullPolicy: "Never"
+        imagePullPolicy: "Always"
         ports:
-        - containerPort: 5858
+        - containerPort: 9200
+        - containerPort: 9300
       nodeSelector:
         training: "true"
