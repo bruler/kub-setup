@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: metastore-1-2-1
-        image: docker.io/fluxcapacitor/metastore-1.2.1
+        image: fluxcapacitor/metastore-1.2.1
         imagePullPolicy: "Never"
         env:
         - name: GET_HOSTS_FROM

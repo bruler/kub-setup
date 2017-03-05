@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: mysql-master
-        image: docker.io/fluxcapacitor/sql-mysql
+        image: fluxcapacitor/sql-mysql
         imagePullPolicy: "Never"
         env:
         - name: GET_HOSTS_FROM

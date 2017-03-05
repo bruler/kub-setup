@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: jupyterhub-master
-        image: docker.io/fluxcapacitor/jupyterhub
+        image: fluxcapacitor/jupyterhub
         imagePullPolicy: "Never"
         env:
         - name: GET_HOSTS_FROM
