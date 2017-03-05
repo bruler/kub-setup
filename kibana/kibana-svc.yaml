@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: kibana
+  name: kibana-5-0-0
 spec:
   type: LoadBalancer
   ports:
@@ -9,4 +9,4 @@ spec:
     port: 80
     targetPort: 5601
   selector:
-    name: kibana
+    name: kibana-5-0-0
